@@ -10,5 +10,9 @@
     "frontend/**/*.ts": "eslint --fix",
     "backend/**/*.js": "eslint --fix",
     "backend/**/*.ts": "eslint --fix"
+  },
+  "dependencies": {
+    "eslint": "^9.3.0",
+    "lint-staged": "^15.2.4"
   }
 }
