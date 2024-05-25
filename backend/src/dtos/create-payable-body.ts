@@ -1,6 +1,6 @@
 import { IsEmail, IsNotEmpty, IsString, Length } from 'class-validator';
 
-export class PayableBody {
+export class CreatePayableBody {
   readonly id?: string;
 
   @IsNotEmpty({ message: 'O campo document é obrigatório' })

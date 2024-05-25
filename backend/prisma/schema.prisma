@@ -27,3 +27,9 @@ model Payable {
   phone    String
   name     String
 }
+
+model User {
+  id       String @id @default(uuid())
+  login    String @unique
+  password String
+}

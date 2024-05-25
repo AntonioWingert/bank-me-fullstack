@@ -1,6 +1,6 @@
-import { IsDate, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsDateString, IsNotEmpty, IsNumber, IsUUID } from 'class-validator';
 
-export class AssignorBody {
+export class CreateAssignorBody {
   readonly id?: string;
 
   @IsNotEmpty({ message: 'O campo value é obrigatório' })
@@ -8,10 +8,10 @@ export class AssignorBody {
   readonly value: number;
 
   @IsNotEmpty({ message: 'O campo emissionDate é obrigatório' })
-  @IsDate({ message: 'O campo emissionDate deve ser uma data' })
+  @IsDateString({}, { message: 'O campo emissionDate deve ser uma data' })
   readonly emissionDate: Date;
 
   @IsNotEmpty({ message: 'O campo assignor é obrigatório' })
-  @IsString({ message: 'O campo assignor deve ser uma string' })
+  @IsUUID()
   readonly assignor: string;
 }
