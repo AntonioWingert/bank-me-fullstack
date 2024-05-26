@@ -3,7 +3,10 @@
     "husky": "^9.0.11"
   },
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
   },
   "lint-staged": {
     "frontend/**/*.js": "eslint --fix",
